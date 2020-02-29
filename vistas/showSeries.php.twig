@@ -1,0 +1,41 @@
+{% extends "layout.php.twig" %}
+{% block titulo %}
+<h1 class="mt-4">mis Series</h1>
+{% endblock %}
+
+{% block contenido %}
+
+<table class="table mt-4">
+		<thead>
+
+			<th class="black">Título</th>
+			<th class="black">Puntuación</th>
+			<th class="black">Plataforma</th>
+			<th class="black">Género</th>
+			<th class="black">Opciones</th>
+
+		</thead>
+
+		<tbody>
+
+			{% for item in series %}
+
+				{% set id = item.IdSer %}
+
+				<tr><td> {{ item.Titulo }} </td>
+				<td> {{ item.Puntuacion }} </td>
+				<td> {% if item.Plataforma %}
+							{{ item.Plataforma }}
+					 {% else %}
+						<p style="color:red;font-weight: bold;">No emitiéndose</p>
+					 {% endif %}</td>
+					 <td>{{ item.Genero }}</td>
+				<td> <a href="index.php?con=serie&ope=borrar&id={{ id }}">Borrar</a></td></tr>
+
+			{% endfor %}
+
+		</tbody>
+
+	</table>
+
+{% endblock %}

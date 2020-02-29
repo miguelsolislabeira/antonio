@@ -1,0 +1,27 @@
+{% extends "layout.php.twig" %}
+
+{% block nav %}
+{% endblock %}
+
+{% block titulo %}
+<h1 class="mt-4">mis Series</h1>
+{% endblock %}
+
+{% block contenido %}
+		<a href="index.php" class="mt-3 mb-3">Volver a inicio</a>
+		<br><br>
+
+		<form method="GET" action="index.php">
+			<input type="hidden" name="con" value="genero">
+			<input type="hidden" name="ope" value="actualizar">
+			<input type="hidden" name="id" value="{{ gene.IdGen }}">
+
+			<label>
+				Género
+				<input id="inputGen" type="text" name="gen" value="{{ gene.Genero }}">
+			</label>
+
+			<button id="boton">Actualizar Género</button>
+
+		</form>
+{% endblock %}

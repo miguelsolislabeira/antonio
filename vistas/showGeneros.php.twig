@@ -1,0 +1,35 @@
+{% extends "layout.php.twig" %}
+
+{% block titulo %}
+<h1 class="mt-4">mis Series</h1>
+{% endblock %}
+
+{% block contenido %}
+
+	<table class="table mt-4">
+			<thead>
+
+				<th class="black">Género</th>
+				<th class="black"></th>
+
+			</thead>
+
+			<tbody>
+
+				{% for item in gen %}
+
+					{% set  id = item.IdGen %}
+
+					<tr><td> {{item.Genero}}
+
+					<td> <a href="index.php?con=genero&ope=editar&id={{ id }}"> Editar</a>
+					<a href="index.php?con=genero&ope=borrar&id={{ id }}">Borrar</a></td></tr>
+
+
+					{% endfor %}
+
+			</tbody>
+
+		</table>
+
+{% endblock %}

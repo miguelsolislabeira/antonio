@@ -1,0 +1,56 @@
+{% extends "layout.php.twig" %}
+{% block titulo %}
+<h1 class="mt-4">mis Series</h1>
+{% endblock %}
+
+{% block nav %}
+{% endblock %}
+
+{% block contenido %}
+
+	<a href="index.php?">Volver</a>
+
+		<form method="GET" action="index.php">
+			<input type="hidden" name="con" value="serie">
+			<input type="hidden" name="ope" value="anadir">
+
+			<table class="table">
+
+				<tbody>
+					<tr><td>Título</td>
+					<td><input type="text" name="titulo" required ></td></tr>
+					<tr><td>Fecha de Estreno</td>
+					<td><input type="date" name="fecha" required></td></tr>
+					<tr><td>Temporadas</td>
+					<td><input type="text" name="temporadas" required></td></tr>
+					<tr><td>Puntuación</td>
+					<td><input type="text" name="puntuacion" required></td></tr>
+					<tr><td>Plataforma</td>
+					<td><input type="text" name="plataforma"></td></tr>
+					<tr><td>Argumento</td>
+					<td><textarea name="argumento" required></textarea></td></tr>
+					<tr><td>Genero</td>
+					<td> <select class="custom-select" name="genero" required>
+
+							<option selected disabled>Elige un genero</option>
+
+							 	{% for item in generos %}
+
+									<option value="{{ item.IdGen }}"> {{ item.Genero }} </option>
+
+								{% endfor %}
+
+							<option value="otro">Otro...</option>
+
+						</select></td>
+
+					<td><button>Enviar</button></td></tr>
+
+				</tbody>
+
+			</table>
+
+		</form>
+
+{% endblock %}
+
