@@ -36,7 +36,7 @@ Class Serie{
      *
      * @return self
      */
-    public function setTitulo($titulo)
+    public function setTitulo( string$titulo)
     {
         $this->titulo = $titulo;
 
@@ -56,7 +56,7 @@ Class Serie{
      *
      * @return self
      */
-    public function setFecha($fecha)
+    public function setFecha (string $fecha)
     {
         $this->fecha = $fecha;
 
@@ -76,7 +76,7 @@ Class Serie{
      *
      * @return self
      */
-    public function setTemporadas($temporadas)
+    public function setTemporadas( int$temporadas)
     {
         $this->temporadas = $temporadas;
 
@@ -96,7 +96,7 @@ Class Serie{
      *
      * @return self
      */
-    public function setPuntuacion($puntuacion)
+    public function setPuntuacion(float $puntuacion)
     {
         $this->puntuacion = $puntuacion;
 
@@ -116,7 +116,7 @@ Class Serie{
      *
      * @return self
      */
-    public function setPlataforma($plataforma)
+    public function setPlataforma(string $plataforma)
     {
         $this->plataforma = $plataforma;
 
@@ -136,7 +136,7 @@ Class Serie{
      *
      * @return self
      */
-    public function setArgumento($argumento)
+    public function setArgumento(string $argumento)
     {
         $this->argumento = $argumento;
 

@@ -8,6 +8,11 @@ require_once("libs/Database.php") ;
          * @var int
          */
 		private $idGen ;
+
+        /**
+         *
+         * @var [string]
+         */
 		private $genero ;
 
     /**
@@ -39,6 +44,11 @@ require_once("libs/Database.php") ;
             return $this;
         }
 
+        /**
+         * Finds all.
+         *
+         * @return     array  ( Array con todos los objetos "Género" )
+         */
         public static function findAll(){
 
         	$db = new Database () ;
@@ -58,7 +68,14 @@ require_once("libs/Database.php") ;
 
 
 
-        public static function find($id){
+        /**
+         * Searches for the first match.
+         *
+         * @param      integer  $id     The identifier
+         *
+         * @return     <type>   ( un objeto de tipo "Género" )
+         */
+        public static function find(int $id){
 
         	$db = new Database() ;
 
@@ -67,6 +84,11 @@ require_once("libs/Database.php") ;
         	return $db->getObject("Genero") ;
     	}
 
+        /**
+         * Inserta o actualiza en la BBDD
+         *
+         * @return     self  ( el último id insertado en la BBDD )
+         */
         public function save(){
 
             $db = new Database() ;
@@ -84,6 +106,9 @@ require_once("libs/Database.php") ;
             endif ;
         }
 
+        /**
+         * Deletes the object.
+         */
         public function delete(){
 
             $db = new Database() ;
