@@ -7,7 +7,7 @@
 	$data =
 		[
 			"host"  => "localhost",
-			"user"  => "root",
-			"pass"  => "",
+			"user"  => "miguel",
+			"pass"  => "password",
 			"dbno"     => "misseries"
 		] ;

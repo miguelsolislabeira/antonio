@@ -2,7 +2,7 @@
 
 	require_once "libs/Data.php" ;
 
-	$con = $_GET["con"]??"serie" ;
+	$con = $_GET["con"]??"Serie" ;
 	$ope = $_GET["ope"]??"listar" ;
 
 	//echo "$con, $ope<br/>" ;
